@@ -81,4 +81,4 @@ def run_webui():
 
 @stub.local_entrypoint()
 def main():
-    run_webui.call()
+    run_webui.remote()
