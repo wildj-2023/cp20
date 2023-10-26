@@ -14,7 +14,7 @@ volume = modal.NetworkFileSystem.new().persist("sdwebui-volume")
 
 
 image = (
-    modal.Image.from_dockerhub("python:3.10-slim")
+    modal.Image.from_registry("python:3.10-slim")
     .apt_install("git", "libgl1-mesa-dev", "libglib2.0-0", "libsm6", "libxrender1", "libxext6")
     .pip_install(
         "torch==2.0.1",
@@ -82,4 +82,3 @@ def run_webui():
 @stub.local_entrypoint()
 def main():
     run_webui.call()
-  
