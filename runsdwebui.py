@@ -69,7 +69,7 @@ image = (
 )
 
 @stub.function(image=image,
-               shared_volumes={persist_dir: volume},
+               network_file_systems={persist_dir: volume},
                gpu="T4",
                timeout=3600)
 def run_webui():
