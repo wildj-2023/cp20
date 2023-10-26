@@ -7,7 +7,7 @@ import modal
 persist_dir = "/content"
 
 stub = modal.Stub("stable-diffusion-webui")
-volume = modal.SharedVolume().persist("sdwebui-volume")
+volume = modal.NetworkFileSystem.new().persist("sdwebui-volume")
 
 image = modal.Image.debian_slim().apt_install("git")
 
