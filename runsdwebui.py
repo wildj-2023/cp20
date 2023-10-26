@@ -10,7 +10,7 @@ persist_dir = "/content"
 webui_dir = persist_dir + "/stable-diffusion-webui"
 
 stub = modal.Stub("stable-diffusion-webui")
-volume = modal.SharedVolume().persist("sdwebui-volume")
+volume = modal.NetworkFileSystem.new().persist("sdwebui-volume")
 
 
 image = (
