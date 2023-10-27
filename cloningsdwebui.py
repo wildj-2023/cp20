@@ -29,5 +29,5 @@ def cloning():
 
 @stub.local_entrypoint()
 def main():
-    cloning.call()
+    cloning.remote()
   
