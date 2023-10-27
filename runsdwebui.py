@@ -70,8 +70,7 @@ image = (
 
 @stub.function(image=image,
                network_file_systems={persist_dir: volume},
-               gpu="T4",
-               timeout=3600)
+               gpu="T4")
 def run_webui():
     sys.path.append(webui_dir)
     os.chdir(webui_dir)
