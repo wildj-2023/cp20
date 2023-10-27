@@ -1,3 +1,6 @@
+# cloningsdwebui.py
+# Replaced old style of modal.com.
+# !!!!!!!!!!!!!!!!!!
 import os
 import subprocess
 
@@ -29,5 +32,5 @@ def cloning():
 
 @stub.local_entrypoint()
 def main():
-    cloning.remote()
+    cloning.remote() # NEW SYNTAX!!!
   
