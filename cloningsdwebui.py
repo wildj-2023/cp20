@@ -12,7 +12,7 @@ volume = modal.NetworkFileSystem.new().persist("sdwebui-volume")
 image = modal.Image.debian_slim().apt_install("git")
 
 @stub.function(image=image,
-               shared_volumes={persist_dir: volume},
+               network_file_systems={persist_dir: volume},
                timeout=1800)
 def cloning():
     os.chdir(persist_dir)
