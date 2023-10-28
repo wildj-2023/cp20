@@ -185,7 +185,7 @@ async def run_stable_diffusion_webui():
       counter = 0
       for chunk in r.iter_content(chunk_size=1024):
         counter += 1
-        print(Fore.CYAN + "\ndownloading..." + counter)
+        print(Fore.CYAN + "\ndownloading..." + str(counter))
 
         if chunk:
           f.write(chunk)
