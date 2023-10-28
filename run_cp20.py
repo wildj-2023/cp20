@@ -179,7 +179,8 @@ async def run_stable_diffusion_webui():
     filename = 'kanpiromix_v20.safetensors'
     r = requests.get(url, stream=True)
     with open(filename, 'wb') as f:
-      couner = 0
+      # CORRECTED.
+      counter = 0
       for chunk in r.iter_content(chunk_size=1024):
         counter += 1
         print(Fore.CYAN + "\ndownloading..." + counter)
