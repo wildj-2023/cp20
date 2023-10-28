@@ -26,26 +26,31 @@ print(target_string + ': ' + str(os.path.exists(target_string)))
 # webui_dir_path = Path(webui_model_dir)
 target_string = webui_dir
 safe_path = Path(target_string)
+print('safe_path: ' + safe_path
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui'
 safe_path = Path(target_string)
+print('safe_path: ' + safe_path
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui/models'
 safe_path = Path(target_string)
+print('safe_path: ' + safe_path
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
 safe_path = Path(target_string)
+print('safe_path: ' + safe_path
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/models'
 safe_path = Path(target_string)
+print('safe_path: ' + safe_path
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 # chdir ##########
-os.chdir(webui_model_dir)
+os.chdir(webui_dir)
 print('chdir: OK.')
 
 # DOWNLOAD ##########
