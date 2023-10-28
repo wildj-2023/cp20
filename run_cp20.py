@@ -22,12 +22,19 @@ webui_model_dir = webui_dir + "/models/Stable-diffusion/"
 # kanpiromix ##########
 target_string = '/content'
 print(target_string + ': ' + str(os.path.exists(target_string)))
+
+target_string = webui_dir
+print(target_string + ': ' + str(os.path.exists(target_string)))
+
 target_string = '/content/stable-diffusion-webui'
 print(target_string + ': ' + str(os.path.exists(target_string)))
+
 target_string = '/content/stable-diffusion-webui/models'
 print(target_string + ': ' + str(os.path.exists(target_string)))
+
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
 print(target_string + ': ' + str(os.path.exists(target_string)))
+
 target_string = '/models'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
