@@ -25,34 +25,38 @@ target_string = '/content'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
 # CORRECTED.
-# webui_dir_path = Path(webui_model_dir)
+# CORRECTED.
 target_string = webui_dir
 safe_path = Path(target_string)
-print('safe_path: ' + safe_path)
+print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 # CORRECTED.
 target_string = '/content/stable-diffusion-webui'
 safe_path = Path(target_string)
-print('safe_path: ' + safe_path)
+print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 # CORRECTED.
 target_string = '/content/stable-diffusion-webui/models'
 safe_path = Path(target_string)
-print('safe_path: ' + safe_path)
+print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 # CORRECTED.
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
 safe_path = Path(target_string)
-print('safe_path: ' + safe_path)
+print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 # CORRECTED.
+# CORRECTED.
 target_string = '/models'
 safe_path = Path(target_string)
-print('safe_path: ' + safe_path)
+print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 # chdir ##########
