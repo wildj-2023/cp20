@@ -20,30 +20,36 @@ webui_dir = "/content/stable-diffusion-webui"
 webui_model_dir = webui_dir + "/models/Stable-diffusion/"
 
 # kanpiromix ##########
+# CORRECTED.
 target_string = '/content'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
+# CORRECTED.
 # webui_dir_path = Path(webui_model_dir)
 target_string = webui_dir
 safe_path = Path(target_string)
 print('safe_path: ' + safe_path)
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 target_string = '/content/stable-diffusion-webui'
 safe_path = Path(target_string)
 print('safe_path: ' + safe_path)
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 target_string = '/content/stable-diffusion-webui/models'
 safe_path = Path(target_string)
 print('safe_path: ' + safe_path)
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
 safe_path = Path(target_string)
 print('safe_path: ' + safe_path)
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
+# CORRECTED.
 target_string = '/models'
 safe_path = Path(target_string)
 print('safe_path: ' + safe_path)
