@@ -9,6 +9,8 @@ import sys
 import shlex
 import os
 
+import requests
+
 # modal系の変数の定義
 stub = modal.Stub("stable-diffusion-webui-2")
 volume_main = modal.NetworkFileSystem.persisted("stable-diffusion-webui-main-2")
@@ -16,6 +18,19 @@ volume_main = modal.NetworkFileSystem.persisted("stable-diffusion-webui-main-2")
 # 色んなパスの定義
 webui_dir = "/content/stable-diffusion-webui"
 webui_model_dir = webui_dir + "/models/Stable-diffusion/"
+
+url='https://civitai.com/api/download/models/64558'
+filename = webui_model_dir + 'kanpiromix_v20.safetensors'
+r = requests.get(url, stream=True)
+with open(filename, 'wb') as f:
+  couner = 0
+  for chunk in r.iter_content(chunk_size=1024):
+    counter += 1
+    print(Fore.CYAN + "\ndownloading..." + counter)
+
+    if chunk:
+      f.write(chunk)
+      f.flush()
 
 # モデルのID
 model_ids = [
