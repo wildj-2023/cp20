@@ -83,7 +83,7 @@ model_ids = [
     secret=modal.Secret.from_name("my-huggingface-secret"),
     network_file_systems={webui_dir: volume_main},
     gpu="T4",
-    timeout=6000,
+    timeout=36000,
 )
 async def run_stable_diffusion_webui():
     print(Fore.CYAN + "\n---------- セットアップ開始 ----------\n")
