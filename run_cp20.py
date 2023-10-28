@@ -23,20 +23,26 @@ webui_model_dir = webui_dir + "/models/Stable-diffusion/"
 target_string = '/content'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
+# webui_dir_path = Path(webui_model_dir)
 target_string = webui_dir
-print(target_string + ': ' + str(os.path.exists(target_string)))
+safe_path = Path(target_string)
+print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui'
-print(target_string + ': ' + str(os.path.exists(target_string)))
+safe_path = Path(target_string)
+print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui/models'
-print(target_string + ': ' + str(os.path.exists(target_string)))
+safe_path = Path(target_string)
+print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
-print(target_string + ': ' + str(os.path.exists(target_string)))
+safe_path = Path(target_string)
+print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 target_string = '/models'
-print(target_string + ': ' + str(os.path.exists(target_string)))
+safe_path = Path(target_string)
+print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 # chdir ##########
 os.chdir(webui_model_dir)
