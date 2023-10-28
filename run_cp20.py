@@ -31,9 +31,11 @@ print(target_string + ': ' + str(os.path.exists(target_string)))
 target_string = '/models'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
+# chdir
 os.chdir(webui_model_dir)
 print(chdir: OK.)
 
+# DOWNLOAD
 url='https://civitai.com/api/download/models/64558'
 filename = 'kanpiromix_v20.safetensors'
 r = requests.get(url, stream=True)
