@@ -61,22 +61,9 @@ print('safe_path: ' + str(safe_path))
 print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 # chdir ##########
-os.chdir(webui_dir)
-print('chdir: OK.')
+#os.chdir(webui_dir)
+#print('chdir: OK.')
 
-# DOWNLOAD ##########
-url='https://civitai.com/api/download/models/64558'
-filename = 'kanpiromix_v20.safetensors'
-r = requests.get(url, stream=True)
-with open(filename, 'wb') as f:
-  couner = 0
-  for chunk in r.iter_content(chunk_size=1024):
-    counter += 1
-    print(Fore.CYAN + "\ndownloading..." + counter)
-
-    if chunk:
-      f.write(chunk)
-      f.flush()
 
 # モデルのID
 model_ids = [
@@ -187,6 +174,19 @@ async def run_stable_diffusion_webui():
         print(Fore.GREEN + model_id["repo_id"] + "のセットアップが完了しました！")
 
     print(Fore.CYAN + "\n---------- セットアップ完了 ----------\n")
+    # DOWNLOAD ##########
+    url='https://civitai.com/api/download/models/64558'
+    filename = 'kanpiromix_v20.safetensors'
+    r = requests.get(url, stream=True)
+    with open(filename, 'wb') as f:
+      couner = 0
+      for chunk in r.iter_content(chunk_size=1024):
+        counter += 1
+        print(Fore.CYAN + "\ndownloading..." + counter)
+
+        if chunk:
+          f.write(chunk)
+          f.flush()
 
     # WebUIを起動
     sys.path.append(webui_dir)
