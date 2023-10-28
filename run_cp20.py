@@ -20,8 +20,14 @@ webui_dir = "/content/stable-diffusion-webui"
 webui_model_dir = webui_dir + "/models/Stable-diffusion/"
 
 # kanpiromix
-print('/content: ' + str(os.path.exists('/content')))
-print('/models: ' + str(os.path.exists('/models')))
+target_string = '/content'
+print(target_string + ': ' + str(os.path.exists(target_string)))
+target_string = '/content/stable-diffusion-webui'
+print(target_string + ': ' + str(os.path.exists(target_string)))
+target_string = '/content/stable-diffusion-webui/models'
+print(target_string + ': ' + str(os.path.exists(target_string)))
+target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
+print(target_string + ': ' + str(os.path.exists(target_string)))
 
 url='https://civitai.com/api/download/models/64558'
 filename = webui_model_dir + 'kanpiromix_v20.safetensors'
