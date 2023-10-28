@@ -28,6 +28,8 @@ target_string = '/content/stable-diffusion-webui/models'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 target_string = '/content/stable-diffusion-webui/models/Stable-diffusion'
 print(target_string + ': ' + str(os.path.exists(target_string)))
+target_string = '/models'
+print(target_string + ': ' + str(os.path.exists(target_string)))
 
 url='https://civitai.com/api/download/models/64558'
 filename = webui_model_dir + 'kanpiromix_v20.safetensors'
