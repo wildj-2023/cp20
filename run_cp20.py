@@ -19,7 +19,7 @@ volume_main = modal.NetworkFileSystem.persisted("stable-diffusion-webui-main-2")
 webui_dir = "/content/stable-diffusion-webui"
 webui_model_dir = webui_dir + "/models/Stable-diffusion/"
 
-# kanpiromix
+# kanpiromix ##########
 target_string = '/content'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 target_string = '/content/stable-diffusion-webui'
@@ -31,11 +31,11 @@ print(target_string + ': ' + str(os.path.exists(target_string)))
 target_string = '/models'
 print(target_string + ': ' + str(os.path.exists(target_string)))
 
-# chdir
+# chdir ##########
 os.chdir(webui_model_dir)
-print(chdir: OK.)
+print('chdir: OK.')
 
-# DOWNLOAD
+# DOWNLOAD ##########
 url='https://civitai.com/api/download/models/64558'
 filename = 'kanpiromix_v20.safetensors'
 r = requests.get(url, stream=True)
