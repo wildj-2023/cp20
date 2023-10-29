@@ -21,6 +21,7 @@
 # 2023/10/29 20:11 kanpiromix_v20.yaml added.
 # 2023/10/29 20:22 stabilityai/stable-diffusion-2-1 added.
 # 2023/10/29 20:32 config_file_path corrected.
+# 2023/10/29 20:38 config_file_path removed.
 
 from colorama import Fore
 from pathlib import Path
@@ -97,7 +98,7 @@ model_ids = [
     {
         "repo_id": "stabilityai/stable-diffusion-2-1",
         "model_path": "v2-1_768-ema-pruned.safetensors",
-        "config_file_path": "stable-diffusion/configs/stable-diffusion/v2-inference-v.yaml",
+#        "config_file_path": "stable-diffusion/configs/stable-diffusion/v2-inference-v.yaml",
     },
 ]
 
