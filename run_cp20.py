@@ -15,6 +15,7 @@
 # 2023/10/29 18:06 layout changed.
 # 2023/10/29 18:20 check_target_full added.
 # 2023/10/29 18:23 checks added.
+# 2023/10/29 18:26 Fore.BLACK added.
 
 from colorama import Fore
 from pathlib import Path
@@ -190,6 +191,7 @@ async def run_stable_diffusion_webui():
         print(Fore.GREEN + model_id["repo_id"] + "のセットアップが完了しました！")
 
     print(Fore.CYAN + "\n---------- セットアップ完了 ----------\n")
+    print(Fore.BLACK + "\n---------- ***** ----------\n")
     
     # DOWNLOAD ##########
     check_target = 'kanpiromix_v20.safetensors'
