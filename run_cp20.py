@@ -9,6 +9,7 @@
 # 2023/10/29 14:40
 # 2023/10/29 14:43
 # 2023/10/29 14:47
+# 2023/10/29 17:58
 from colorama import Fore
 from pathlib import Path
 
@@ -183,8 +184,13 @@ async def run_stable_diffusion_webui():
         print(Fore.GREEN + model_id["repo_id"] + "のセットアップが完了しました！")
 
     print(Fore.CYAN + "\n---------- セットアップ完了 ----------\n")
+    
     # DOWNLOAD ##########
-    if not Path('kanpiromix_v20.safetensors').exists():
+    check_target = 'kanpiromix_v20.safetensors'
+    result = Path(check_target).exists()
+    print(check_target + ": " + str(result))
+    sys.exit('END!!!')
+    if not Path(check_target).exists():
         url='https://civitai.com/api/download/models/64558'
         filename = 'kanpiromix_v20.safetensors'
         r = requests.get(url, stream=True)
