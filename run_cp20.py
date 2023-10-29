@@ -13,7 +13,8 @@
 # 2023/10/29 18:02
 # 2023/10/29 18:04
 # 2023/10/29 18:06 layout changed.
-# 2023/10/29 18:20 check_target_full adde.
+# 2023/10/29 18:20 check_target_full added.
+# 2023/10/29 18:23 checks added.
 
 from colorama import Fore
 from pathlib import Path
@@ -192,9 +193,31 @@ async def run_stable_diffusion_webui():
     
     # DOWNLOAD ##########
     check_target = 'kanpiromix_v20.safetensors'
+
     check_target_full = '/content/stable-diffusion-webui/models/Stable-diffusion/' + check_target
     result = Path(check_target_full).exists()
     print(check_target_full + ": " + str(result))
+
+    # /
+    check_target_full = '/' + check_target
+    result = Path(check_target_full).exists()
+    print(check_target_full + ": " + str(result))
+    
+    # /content/
+    check_target_full = '/content/' + check_target
+    result = Path(check_target_full).exists()
+    print(check_target_full + ": " + str(result))
+    
+    # /content/stable-diffusion-webui/
+    check_target_full = '/content/stable-diffusion-webui/' + check_target
+    result = Path(check_target_full).exists()
+    print(check_target_full + ": " + str(result))
+    
+    # /content/stable-diffusion-webui/models/
+    check_target_full = '/content/stable-diffusion-webui/models/' + check_target
+    result = Path(check_target_full).exists()
+    print(check_target_full + ": " + str(result))
+    
     sys.exit('END!!!')
     if not Path(check_target).exists():
         url='https://civitai.com/api/download/models/64558'
