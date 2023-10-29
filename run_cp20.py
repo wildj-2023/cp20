@@ -17,6 +17,7 @@
 # 2023/10/29 18:23 checks added.
 # 2023/10/29 18:26 Fore.BLACK added.
 # 2023/10/29 18:31 sys.exit('END!!!') removed.
+# 2023/10/29 19:58 v2-1_768-ema-pruned added.
 
 from colorama import Fore
 from pathlib import Path
@@ -89,6 +90,11 @@ model_ids = [
         "repo_id": "hakurei/waifu-diffusion-v1-4",
         "model_path": "wd-1-4-anime_e1.ckpt",
         "config_file_path": "wd-1-4-anime_e1.yaml",
+    },
+    {
+        "repo_id": "v2-1_768-ema-pruned",
+        "model_path": "v2-1_768-ema-pruned.safetensors",
+        "config_file_path": "v2-1_768-ema-pruned.yaml",
     },
 ]
 
