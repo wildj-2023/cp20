@@ -18,6 +18,7 @@
 # 2023/10/29 18:26 Fore.BLACK added.
 # 2023/10/29 18:31 sys.exit('END!!!') removed.
 # 2023/10/29 19:58 v2-1_768-ema-pruned added.
+# 2023/10/29 20:11 kanpiromix_v20.yaml added.
 
 from colorama import Fore
 from pathlib import Path
@@ -248,6 +249,22 @@ async def run_stable_diffusion_webui():
             if chunk:
               f.write(chunk)
               f.flush()
+    # yaml
+    url='https://huggingface.co/spaces/stabilityai/stable-diffusion/raw/b028a73583ec2096d4fc3c7e95c9e06a24a5e92b/configs/stable-diffusion/v2-inference-v.yaml'
+    filename = '/content/stable-diffusion-webui/models/Stable-diffusion/kanpiromix_v20.yaml'
+    r = requests.get(url, stream=True)
+    with open(filename, 'wb') as f:
+      # CORRECTED.
+      counter = 0
+      for chunk in r.iter_content(chunk_size=1024):
+        counter += 1
+      if counter % 1000 == 0:
+        print(Fore.CYAN + " (downloading..." + str(counter) + ") ", end=', ')
+
+        if chunk:
+          f.write(chunk)
+          f.flush()
+    
 
     # WebUIを起動
     sys.path.append(webui_dir)
