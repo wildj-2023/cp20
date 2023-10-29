@@ -5,6 +5,7 @@
 # 2023/10/29 0:58
 # 2023/10/29 0:59
 # 2023/10/29 1:00
+# 2023/10/29 14:37
 from colorama import Fore
 from pathlib import Path
 
@@ -180,19 +181,20 @@ async def run_stable_diffusion_webui():
 
     print(Fore.CYAN + "\n---------- セットアップ完了 ----------\n")
     # DOWNLOAD ##########
-    url='https://civitai.com/api/download/models/64558'
-    filename = 'kanpiromix_v20.safetensors'
-    r = requests.get(url, stream=True)
-    with open(filename, 'wb') as f:
-      # CORRECTED.
-      counter = 0
-      for chunk in r.iter_content(chunk_size=1024):
-        counter += 1
-        print(Fore.CYAN + "\ndownloading..." + str(counter))
-
-        if chunk:
-          f.write(chunk)
-          f.flush()
+    if not Path(kanpiromix_v20.safetensors).exists():
+        url='https://civitai.com/api/download/models/64558'
+        filename = 'kanpiromix_v20.safetensors'
+        r = requests.get(url, stream=True)
+        with open(filename, 'wb') as f:
+          # CORRECTED.
+          counter = 0
+          for chunk in r.iter_content(chunk_size=1024):
+            counter += 1
+            print(Fore.CYAN + " (downloading..." + str(counter) + ") ")
+    
+            if chunk:
+              f.write(chunk)
+              f.flush()
 
     # WebUIを起動
     sys.path.append(webui_dir)
