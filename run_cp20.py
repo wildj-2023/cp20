@@ -12,6 +12,7 @@
 # 2023/10/29 17:58
 # 2023/10/29 18:02
 # 2023/10/29 18:04
+# 2023/10/29 18:06 layout changed.
 
 from colorama import Fore
 from pathlib import Path
@@ -202,7 +203,7 @@ async def run_stable_diffusion_webui():
           counter = 0
           for chunk in r.iter_content(chunk_size=1024):
             counter += 1
-          if counter % 1000 ==0:
+          if counter % 1000 == 0:
             print(Fore.CYAN + " (downloading..." + str(counter) + ") ", end=', ')
     
             if chunk:
