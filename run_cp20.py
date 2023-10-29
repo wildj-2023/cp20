@@ -19,6 +19,7 @@
 # 2023/10/29 18:31 sys.exit('END!!!') removed.
 # 2023/10/29 19:58 v2-1_768-ema-pruned added.
 # 2023/10/29 20:11 kanpiromix_v20.yaml added.
+# 2023/10/29 20:22 stabilityai/stable-diffusion-2-1 added.
 
 from colorama import Fore
 from pathlib import Path
@@ -93,7 +94,7 @@ model_ids = [
         "config_file_path": "wd-1-4-anime_e1.yaml",
     },
     {
-        "repo_id": "v2-1_768-ema-pruned",
+        "repo_id": "stabilityai/stable-diffusion-2-1",
         "model_path": "v2-1_768-ema-pruned.safetensors",
         "config_file_path": "v2-1_768-ema-pruned.yaml",
     },
