@@ -22,6 +22,7 @@
 # 2023/10/29 20:22 stabilityai/stable-diffusion-2-1 added.
 # 2023/10/29 20:32 config_file_path corrected.
 # 2023/10/29 20:38 config_file_path removed.
+# 2023/10/29 22:15 kanpiromix_v10 added.
 
 from colorama import Fore
 from pathlib import Path
@@ -89,6 +90,7 @@ print(target_string + ': ' + str(os.path.exists(safe_path)))
 
 
 # モデルのID
+# coffee0412/KanPiroMix
 model_ids = [
     {
         "repo_id": "hakurei/waifu-diffusion-v1-4",
@@ -99,6 +101,11 @@ model_ids = [
         "repo_id": "stabilityai/stable-diffusion-2-1",
         "model_path": "v2-1_768-ema-pruned.safetensors",
 #        "config_file_path": "stable-diffusion/configs/stable-diffusion/v2-inference-v.yaml",
+    },
+    {
+        "repo_id": "coffee0412/KanPiroMix",
+        "model_path": "kanpiromix_v10.safetensors",
+#        "config_file_path": "stable-diffusion/configs/stable-diffusion/kanpiromix_v10.yaml",
     },
 ]
 
