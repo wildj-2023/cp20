@@ -16,6 +16,7 @@
 # 2023/10/29 18:20 check_target_full added.
 # 2023/10/29 18:23 checks added.
 # 2023/10/29 18:26 Fore.BLACK added.
+# 2023/10/29 18:31 sys.exit('END!!!') removed.
 
 from colorama import Fore
 from pathlib import Path
@@ -220,10 +221,15 @@ async def run_stable_diffusion_webui():
     result = Path(check_target_full).exists()
     print(check_target_full + ": " + str(result))
     
-    sys.exit('END!!!')
-    if not Path(check_target).exists():
+    # /content/stable-diffusion-webui/models/Stable-diffusion/
+    check_target_full = '/content/stable-diffusion-webui/models/Stable-diffusion/' + check_target
+    result = Path(check_target_full).exists()
+    print(check_target_full + ": " + str(result))
+    
+    # sys.exit('END!!!')
+    if not Path(check_target_full).exists():
         url='https://civitai.com/api/download/models/64558'
-        filename = 'kanpiromix_v20.safetensors'
+        filename = check_target_full
         r = requests.get(url, stream=True)
         with open(filename, 'wb') as f:
           # CORRECTED.
