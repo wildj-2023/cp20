@@ -23,6 +23,7 @@
 # 2023/10/29 20:32 config_file_path corrected.
 # 2023/10/29 20:38 config_file_path removed.
 # 2023/10/29 22:15 kanpiromix_v10 added.
+# 2023/11/04 19:11 chilloutmix_NiPrunedFp32Fix.safetensors
 
 from colorama import Fore
 from pathlib import Path
@@ -92,6 +93,11 @@ print(target_string + ': ' + str(os.path.exists(safe_path)))
 # モデルのID
 # coffee0412/KanPiroMix
 model_ids = [
+    {
+        "repo_id": "92john/chilloutmix_NiPrunedFp32Fix.safetensors",
+        "model_path": "chilloutmix_NiPrunedFp32Fix.safetensors",
+#        "config_file_path": "stable-diffusion/configs/stable-diffusion/v2-inference-v.yaml",
+    },
     {
         "repo_id": "hakurei/waifu-diffusion-v1-4",
         "model_path": "wd-1-4-anime_e1.ckpt",
