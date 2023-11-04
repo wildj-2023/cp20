@@ -1,29 +1,6 @@
 # run_cp20.py
-# 2023/10/29 0:44
-# 2023/10/29 0:52
-# 2023/10/29 0:54
-# 2023/10/29 0:58
-# 2023/10/29 0:59
-# 2023/10/29 1:00
-# 2023/10/29 14:37
-# 2023/10/29 14:40
-# 2023/10/29 14:43
-# 2023/10/29 14:47
-# 2023/10/29 17:58
-# 2023/10/29 18:02
-# 2023/10/29 18:04
-# 2023/10/29 18:06 layout changed.
-# 2023/10/29 18:20 check_target_full added.
-# 2023/10/29 18:23 checks added.
-# 2023/10/29 18:26 Fore.BLACK added.
-# 2023/10/29 18:31 sys.exit('END!!!') removed.
-# 2023/10/29 19:58 v2-1_768-ema-pruned added.
-# 2023/10/29 20:11 kanpiromix_v20.yaml added.
-# 2023/10/29 20:22 stabilityai/stable-diffusion-2-1 added.
-# 2023/10/29 20:32 config_file_path corrected.
-# 2023/10/29 20:38 config_file_path removed.
-# 2023/10/29 22:15 kanpiromix_v10 added.
-# 2023/11/04 19:11 chilloutmix_NiPrunedFp32Fix.safetensors
+# 2023/11/04 19:11 chilloutmix_NiPrunedFp32Fix.safetensors adde.
+# 2023/11/04 19:48 –-enable-insecure-extension-access added.
 
 from colorama import Fore
 from pathlib import Path
@@ -290,7 +267,8 @@ async def run_stable_diffusion_webui():
 
     prepare_environment()
     # 最初のargumentは無視されるので注意
-    sys.argv = shlex.split("--a --gradio-debug --share --xformers")
+    # enable-insecure-extension-access
+    sys.argv = shlex.split("--a --gradio-debug --share --xformers --enable-insecure-extension-access")
     start()
 
 
