@@ -1,5 +1,8 @@
 # run_bob.py
 # stable-diffusion-webui_controlNet3.py
+
+# 2023/11/12 20:57 gpu and timeout changed.
+
 from colorama import Fore
 from pathlib import Path
 
@@ -99,8 +102,8 @@ model_ids = [
     .pip_install("git+https://github.com/mlfoundations/open_clip.git@bb6e834e9c70d9c27d0dc3ecedeebeaeb1ffad6b"),
     secret=modal.Secret.from_name("my-huggingface-secret"),
     network_file_systems={webui_dir: volume_main},
-    gpu="a10g",
-    timeout=6000,
+    gpu="t4", # t4 < a10g
+    timeout=36000, # 10時間
 )
 async def run_stable_diffusion_webui():
     print(Fore.CYAN + "\n---------- セットアップ開始 ----------\n")
