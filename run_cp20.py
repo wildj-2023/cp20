@@ -66,6 +66,15 @@ print(target_string + ': ' + str(os.path.exists(safe_path)))
 #os.chdir(webui_dir)
 #print('chdir: OK.')
 
+# requirement.txt TEST ##########
+print('*** requirement.txt START ***')
+#os.chdir(webui_dir)
+import pip, site, importlib
+#pip.main(['install', '--user', 'modelx'])  # pip install --user modelx を実行
+pip.main(['freeze'])  # pip freezeを実行？？？
+importlib.reload(site)  
+print('*** requirement.txt END ***')
+
 
 # モデルのID
 # coffee0412/KanPiroMix
