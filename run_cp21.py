@@ -3,6 +3,7 @@
 # 2023/11/04 19:48 –-enable-insecure-extension-access added.
 # 2023/11/12 17:07 "wheel" added.
 # 2023/11/12 17:12 pip install wheel added.
+# 2023/11/12 17:18 "numpy" changed.
 
 from colorama import Fore
 from pathlib import Path
@@ -217,7 +218,8 @@ model_ids = [
         "mypy-extensions==1.0.0",
         "networkx==3.1",
         "numba==0.58.1",
-        "numpy==1.23.3",
+#        "numpy==1.23.3",
+        "numpy",
         "nvidia-cublas-cu11==11.10.3.66",
         "nvidia-cublas-cu12==12.1.3.1",
         "nvidia-cuda-cupti-cu12==12.1.105",
