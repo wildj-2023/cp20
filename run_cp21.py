@@ -2,6 +2,7 @@
 # 2023/11/04 19:11 chilloutmix_NiPrunedFp32Fix.safetensors adde.
 # 2023/11/04 19:48 –-enable-insecure-extension-access added.
 # 2023/11/12 17:07 "wheel" added.
+# 2023/11/12 17:12 pip install wheel added.
 
 from colorama import Fore
 from pathlib import Path
@@ -67,14 +68,14 @@ print(target_string + ': ' + str(os.path.exists(safe_path)))
 #os.chdir(webui_dir)
 #print('chdir: OK.')
 
-# requirement.txt TEST ##########
-print('*** requirement.txt START ***')
+# pip install wheel
+print('*** pip install wheel START ***')
 #os.chdir(webui_dir)
 import pip, site, importlib
-#pip.main(['install', '--user', 'modelx'])  # pip install --user modelx を実行
-pip.main(['freeze'])  # pip freezeを実行？？？
+pip.main(['install', '--user', 'wheel'])  # pip install --user wheelを実行
+#pip.main(['freeze'])  # pip freezeを実行？？？
 importlib.reload(site)  
-print('*** requirement.txt END ***')
+print('*** pip install wheel END ***')
 
 
 # モデルのID
