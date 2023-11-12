@@ -2,6 +2,7 @@
 # stable-diffusion-webui_controlNet3.py
 
 # 2023/11/12 20:57 gpu and timeout changed.
+# 2023/11/12 21:13 chilloutmix_NiPrunedFp32Fix.safetensors added.
 
 from colorama import Fore
 from pathlib import Path
@@ -37,7 +38,13 @@ model_ids = [
        "model_path": "Models/BloodOrangeMix/BloodNightOrangeMix.ckpt",
        "config_file_path": "",
        "model_name": "BloodNightOrangeMix.ckpt",
-    },
+   },
+   {
+       "repo_id": "92john/chilloutmix_NiPrunedFp32Fix.safetensors",
+       "model_path": "chilloutmix_NiPrunedFp32Fix.safetensors",
+       "config_file_path": "",
+       "model_name": "chilloutmix_NiPrunedFp32Fix.safetensors",
+   },
 ]
 
 # ※v2.6ブランチを使用するのでpythonのバージョン上げたのとrequirements_versions.txtになんとなく合わせました
