@@ -1,6 +1,7 @@
 # run_cp21.py
 # 2023/11/04 19:11 chilloutmix_NiPrunedFp32Fix.safetensors adde.
 # 2023/11/04 19:48 –-enable-insecure-extension-access added.
+# 2023/11/12 17:07 "wheel" added.
 
 from colorama import Fore
 from pathlib import Path
@@ -111,6 +112,7 @@ model_ids = [
         "pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers"
     )
     .pip_install(
+        "wheel",
         "absl-py==2.0.0",
         "accelerate==0.12.0",
         "addict==2.4.0",
